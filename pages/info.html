@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>页面模板</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="../styles/global.css" rel="stylesheet">
+<link rel="stylesheet" href="../styles/zTreeStyle.css">
+<style>
+    .header{
+        background-color: #333;
+        height: 64px;
+    }
+    .header-box{
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .header-box ul{
+        font-size: 0px;
+    }
+    .header-box ul li{
+        display: inline-block;
+        font-size: 0px;
+    }
+
+    .header-box ul li:nth-child(1){
+        width: 44%;
+        text-align: left;
+        position: relative;
+        top: 2px;
+    }
+    .header-box ul li:nth-child(2){
+        width: 44%;
+        position: relative;
+        top: -1px;
+    }
+    .header-box ul li:nth-child(3){
+        width: 12%;
+        text-align: right;
+        position: relative;
+        top: 11px;
+    }
+   
+    .header-box ul li strong{
+       font-size: 24px;
+       color: #fff;
+       letter-spacing: 2px;
+       font-weight: inherit;
+    }
+    .header-box ul li i{
+        width:0; 
+        height:0; 
+        border-left:10px solid transparent;
+        border-right:10px solid transparent;
+        border-bottom:5px solid #fff;
+        position: absolute;
+        bottom: -17px;
+        left: 40px;
+    }
+
+    .header-box ul li input,
+    .header-box ul li button{
+       font-size: 14px;
+       background-color: transparent;
+       border:none;
+       outline: none;
+       color: #fff;
+    }
+
+    .header-box ul li input{
+        border:1px solid #ccc;
+        border-radius: 3px;
+        height: 30px;
+        width: 200px;
+        padding: 0 30px 0 8px;
+    }
+    .header-box ul li button{
+        cursor: pointer;
+        background-color: #f2862c;
+        padding: 4px 16px;
+        margin: 0 6px;
+        border-radius: 3px;
+        letter-spacing: 1px;
+    }
+    .header-box ul li button:hover{
+        background-color: #d97828;
+    }
+
+    .header-box ul li span{
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    
+    .input-box{
+        width: 240px;
+        display: inline-block;
+        margin-right: 15px;
+        position: relative;
+    }
+    .input-box a{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url(../images/search.png) center center no-repeat;
+        background-size: 18px 18px;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        opacity: 0.8;
+    }
+    .ic-phone{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../images/phone.png) no-repeat;
+        background-size: 100% 100%;
+        margin-right: 10px;
+        position: relative;
+        top: 5px;
+    }
+
+    
+
+    /*container*/
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .title li{
+        display: inline-block;
+        height: 60px;
+        line-height: 60px;
+        float: left;
+    }
+    .title i{
+        display: inline-block;
+        width: 170px;
+        height: 100%;
+        background: url(../images/logo.png) left center no-repeat;
+        background-size: 88% 70%;
+    }
+    .title a{
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 17px;
+    }
+    .title a:hover{
+        color: #f2862c;
+    }
+    .title a.nowType{
+        color: #f2862c;
+        font-size: 20px;
+    }
+    .title span{
+        margin: 0 10px;
+    }
+</style>
+</head>
+<body>
+<div class="panel">
+	
+<div class="header">
+    <div class="header-box">
+        <ul>
+            <li>
+                <strong>核保系统</strong>
+                <i></i>
+            </li>
+            <li>
+                <div class="input-box">
+                    <input type="text" name="" value="" placeholder="三年息 储蓄保险">
+                    <a href="javascript:;"></a>
+                </div>
+                
+                <button>登录</button>
+                <button>注册</button>
+            </li>
+           
+            <li>
+                <div><span>24小时热线服务</span></div>
+                <div>
+                    <span class="ic-phone"></span>
+                    <span>3123 3123</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="title">
+        <ul>
+            <li>
+                <i></i>
+            </li>
+            <li>
+                <a href="../index.html">任务工作台</a>
+                <span>|</span>
+                <a href="javascript:;" class="nowType">保单详细信息</a>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</div>
+	<div class="fw_main_content">
+		<!--bd_info_top s-->
+		<div class="bd_info_top">
+			<ul class="info_nav">
+				<li class="current"><a>保单信息</a></li>
+				<li><a>生存调查通知单</a></li>
+				<li><a>影像信息</a></li>
+				<li><a>历史保单信息</a></li>
+				<li><a>操作历史</a></li>
+			</ul>
+			<div class="info_top_r">
+				<div class="box_table">
+					<div class="table_title">照会信息</div>
+					<button class="button" id="xiaFa">下发照会</button>
+					<button class="button" id="piLiang">批量处理</button>
+					
+					<div class="xiafa_hide" id="xiaFaHide">
+						<div class="box_titles">下发处理</div>
+						<div class="box_contents">
+							<table class="pop_table fw_table_noborder">
+								<tr>
+									<td width="100">照会代码：</td>
+									<td><input class="input input_small" type="text"></td>
+									<td width="100">照会描述：</td>
+									<td><input class="input input_small" type="text"></td>
+									<td class="td_oper" width="60"><span>查询</span></td>
+								</tr>
+							</table>
+							<div class="pop_sub_title">照会列表</div>
+							<table class="fw_table">
+								<tr class="t_head">
+									<td>照会代码</td>
+									<td>照会描述</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+							<div class="pop_sub_title">照会列表</div>
+							<textarea class="text_area"></textarea>
+							<div class="td_oper" id="hidePopSpan">
+								<span>确定</span>
+								<span class="cancel">取消</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="xiafa_hide zhaohui_hide" id="zhaoHuiHide">
+						<div class="box_titles">照会处理</div>
+						<div class="box_contents">
+							<table class="pop_table fw_table_noborder">
+								<tr>
+									<td width="100">照会状态：</td>
+									<td>
+										<select class="select">
+											<option value="空">空</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>照会描述：</td>
+									<td>
+										<textarea class="text_area text_area_small"></textarea>
+									</td>
+								</tr>
+							</table>
+							<div class="td_oper" id="hidePopSpanZh">
+								<span>确定</span>
+								<span class="cancel">取消</span>
+							</div>
+						</div>
+					</div>
+					
+					<table class="fw_table">
+						<tr class="t_head">
+							<td>照会ID</td>
+							<td>照会描述</td>
+							<td>照会等级</td>
+							<td>照会状态</td>
+							<td>照会操作</td>
+						</tr>
+						<tr>
+							<td>A1121</td>
+							<td>客户（张三）因健康原因（饮酒），转为体检件</td>
+							<td>Waring</td>
+							<td>已下发</td>
+							<td class="td_oper">
+								<span>查看</span>
+								<span>处理</span>
+							</td>
+						</tr>
+						<tr>
+							<td>B1012</td>
+							<td>被保人（张三）年龄大于71岁，财务核保要求，请人工审核。</td>
+							<td>Waring</td>
+							<td>已下发</td>
+							<td class="td_oper">
+								<span>查看</span>
+								<span>处理</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--bd_info_top e-->
+		
+		<div class="info_nav_contents">
+			<!--bd_info_con 保单基本信息 s-->
+			<div class="bd_info_con">
+				<!--form_group s-->
+				<div class="form_group">
+					<div class="table_title">保单基本信息<span class="arrows arrows_down"></span></div>
+					<div class="slide_table">
+						<table class="fw_table_form">
+							<tr>
+								<td width="160">投保单号/保单号：</td>
+								<td><input class="input" type="text" value="A28718181"></td>
+								<td width="170">生效日期：</td>
+								<td><input class="input input_date" type="text" value="2017-08-11" readonly="readonly"></td>
+								<td width="160">收单日：</td>
+								<td><input class="input input_date" type="text" value="2017-08-11" readonly="readonly"></td>
+							</tr>
+							<tr>
+								<td>签单日：</td>
+								<td><input class="input input_date" type="text" value="2017-08-11" readonly="readonly"></td>
+								<td>保单类型：</td>
+								<td><input class="input" type="text" value="个险" readonly="readonly"></td>
+								<td>业务员代码：</td>
+								<td><input class="input" type="text" value="00002298"></td>
+							</tr>
+							<tr>
+								<td>机构：</td>
+								<td><input class="input" type="text" value="上海分公司"></td>
+								<td>渠道：</td>
+								<td><input class="input" type="text" value="营销员渠道"></td>
+								<td>缴费方式：</td>
+								<td>
+									<select class="select">
+								        <option value="趸缴">趸缴</option>
+								        <option value="年缴">年缴</option>
+								        <option value="半年缴">半年缴</option>
+								        <option value="季缴">季缴</option>
+								        <option value="月缴">月缴</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>付费方式：</td>
+								<td><input class="input" type="text"value="现金"></td>
+								<td>保费过期未付选择：</td>
+								<td>
+									<select class="select">
+								        <option value="终止合同">终止合同</option>
+								        <option value="自动垫缴保险费">自动垫缴保险费</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--form_group e-->
+				
+				<!--form_group s-->
+				<div class="form_group">
+					<div class="table_title">客户信息<span class="arrows arrows_down"></span></div>
+					<div class="slide_table">
+						<div class="box_user_info">
+							<img src="../styles/images/icon_bei.png">
+						</div>
+						<table class="fw_table_form">
+							<tr>
+								<td width="160">姓名：</td>
+								<td><input class="input" type="text" value="张三"></td>
+								<td width="170">证件类型：</td>
+								<td>
+									<select class="select">
+								        <option value="身份证">身份证</option>
+									</select>
+								</td>
+								<td width="160">证件号码：</td>
+								<td><input class="input" type="text" value="321991198808049828"></td>
+							</tr>
+							<tr>
+								<td>性别：</td>
+								<td>
+									<select class="select">
+								        <option value="男">男</option>
+								        <option value="女">女</option>
+									</select>
+								</td>
+								<td>生日：</td>
+								<td><input class="input input_date" type="text" value="2017-08-11" readonly="readonly"></td>
+								<td>年龄：</td>
+								<td><input class="input" type="text" value="29" readonly="readonly"></td>
+							</tr>
+							<tr>
+								<td>职业：</td>
+								<td><input class="input" type="text" value="B11-公务员"></td>
+								<td>国籍：</td>
+								<td>
+									<select class="select">
+								        <option value=""></option>
+									</select>
+								</td>
+								<td>与投保人关系：</td>
+								<td>
+									<select class="select">
+										<option value="配偶">配偶</option>
+										<option value="子女">子女</option>
+										<option value="父亲">父亲</option>
+										<option value="母亲">母亲</option>
+										<option value="祖父">祖父</option>
+										<option value="祖母">祖母</option>
+										<option value="舅母">舅母</option>
+										<option value="舅父">舅父</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>联系方式：</td>
+								<td><input class="input" type="text" value="1388888888"></td>
+								<td>固定电话：</td>
+								<td><input class="input" type="text" value="021-2828871"></td>
+								<td>婚姻状况：</td>
+								<td>
+									<select class="select">
+										<option value="已婚">已婚</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>通讯地址：</td>
+								<td><input class="input" type="text" readonly="readonly" id="city"></td>
+								<td>详细地址：</td>
+								<td colspan="3"><input class="input" type="text"></td>
+							</tr>
+						</table>
+						
+						<div class="box_user_info">
+							<img src="../styles/images/icon_tou.png">
+						</div>
+						<table class="fw_table_form">
+							<tr>
+								<td width="160">姓名：</td>
+								<td><input class="input" type="text" value="张三"></td>
+								<td width="170">证件类型：</td>
+								<td>
+									<select class="select">
+								        <option value="身份证">身份证</option>
+									</select>
+								</td>
+								<td width="160">证件号码：</td>
+								<td><input class="input" type="text" value="321991198808049828"></td>
+							</tr>
+							<tr>
+								<td>性别：</td>
+								<td>
+									<select class="select">
+								        <option value="男">男</option>
+								        <option value="女">女</option>
+									</select>
+								</td>
+								<td>生日：</td>
+								<td><input class="input input_date" type="text" value="2017-08-11" readonly="readonly"></td>
+								<td>年龄：</td>
+								<td><input class="input" type="text" value="29"></td>
+							</tr>
+							<tr>
+								<td>职业：</td>
+								<td><input class="input" type="text" value="B11-公务员"></td>
+								<td>国籍：</td>
+								<td>
+									<select class="select">
+								        <option value=""></option>
+									</select>
+								</td>
+								<td>与投保人关系：</td>
+								<td>
+									<select class="select">
+										<option value="配偶">配偶</option>
+										<option value="子女">子女</option>
+										<option value="父亲">父亲</option>
+										<option value="母亲">母亲</option>
+										<option value="祖父">祖父</option>
+										<option value="祖母">祖母</option>
+										<option value="舅母">舅母</option>
+										<option value="舅父">舅父</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>联系方式：</td>
+								<td><input class="input" type="text" value="1388888888"></td>
+								<td>固定电话：</td>
+								<td><input class="input" type="text" value="021-2828871"></td>
+								<td>婚姻状况：</td>
+								<td>
+									<select class="select">
+										<option value="已婚">已婚</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>通讯地址：</td>
+								<td><input class="input" type="text" readonly="readonly"></td>
+								<td>详细地址：</td>
+								<td colspan="3"><input class="input" type="text"></td>
+							</tr>
+						</table>
+						
+						<div class="box_user_info">
+							<img src="../styles/images/icon_shouyi.png">
+						</div>
+						<div class="box_table">
+							<div class="list_oper">
+								<span class="icon_add" id="addShou"></span>
+								<span class="icon_delete" id="deleteShou"></span>
+							</div>
+							<table class="fw_table fw_table_noborder" id="addTable">
+								<tr class="t_head">
+									<td>与被保人关系</td>
+									<td>姓名</td>
+									<td>证件类型</td>
+									<td>证件号码</td>
+									<td>生日</td>
+									<td>受益比例</td>
+									<td>性别</td>
+									<td>联系方式</td>
+								</tr>
+								<tr>
+									<td>
+										<select class="select">
+											<option value="配偶">配偶</option>
+											<option value="子女">子女</option>
+											<option value="父亲">父亲</option>
+											<option value="母亲">母亲</option>
+											<option value="祖父">祖父</option>
+											<option value="祖母">祖母</option>
+											<option value="舅母">舅母</option>
+											<option value="舅父">舅父</option>
+										</select>
+									</td>
+									<td><input class="input" type="text"></td>
+									<td>
+										<select class="select">
+											<option value="身份证">身份证</option>
+										</select>
+									</td>
+									<td>321991198808049828</td>
+									<td><input class="input input_date" type="text" value="2017-08-11" readonly="readonly"></td>
+									<td>85%</td>
+									<td>
+										<select class="select">
+											<option value="男">男</option>
+										</select>
+									</td>
+									<td><input class="input" type="text" value="1388888888"></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!--form_group e-->
+				
+				<!--form_group s-->
+				<div class="form_group">
+					<div class="table_title">险种信息<span class="arrows arrows_down"></span></div>
+					<div class="slide_table">
+						<table class="fw_table_form">
+							<tr>
+								<td width="100">主险：</td>
+								<td width="300">
+									<select class="select">
+								        <option value="AA0101-金护一生A款">AA0101-金护一生A款</option>
+			          					<option value="EH1012-金护一生E款">EH1012-金护一生E款</option>
+									</select>
+								</td>
+								<td width="100">附加险：</td>
+								<td width="200">
+									<input type="text" class="input" readonly="readonly" id="getFuJiaXian">
+									<div class="box_tree">
+										<ul  id="treeDemo" class="ztree"></ul>
+									</div>
+								</td>
+								<td></td>
+								<td width="80"><img class="btn_calc" src="../styles/images/btn_calc.png"></td>
+							</tr>
+						</table>
+						<table class="fw_table fw_table_noborder">
+							<tr class="t_head">
+								<td>险种名称</td>
+								<td>险种代码</td>
+								<td>保额</td>
+								<td>份数</td>
+								<td>生效日</td>
+								<td>保费</td>
+								<td>职业加费</td>
+								<td>操作</td>
+							</tr>
+							<tr>
+								<td>健康险</td>
+								<td>A2A0101</td>
+								<td><input class="input" type="text" value="30,000"></td>
+								<td><input class="input" type="text" value="叁"></td>
+								<td><input class="input input_date" type="text" value="1988/07/08" readonly="readonly"></td>
+								<td>30,000</td>
+								<td>30,000</td>
+								<td class="td_oper">
+									<span>添加</span>
+									<span>删除</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="table_title">健康信息<span class="arrows arrows_down"></span></div>
+					<div class="slide_table">
+						<table class="fw_table_form">
+							<tr>
+								<td width="180">姓名：</td>
+								<td><input class="input" type="text" value="张三"></td>
+								<td width="170">身高：</td>
+								<td><input class="input" type="text" value="178"></td>
+								<td width="160">体重：</td>
+								<td><input class="input" type="text" value="63"></td>
+							</tr>
+							<tr>
+								<td>过去一年体重变化：</td>
+								<td><input class="input input_small" type="text">kg</td>
+								<td>变化原因：</td>
+								<td colspan="3"><input class="input" type="text"></td>
+							</tr>
+							<tr>
+								<td>吸烟支数：</td>
+								<td><input class="input input_small" type="text">/天</td>
+								<td>吸烟年数：</td>
+								<td><input class="input" type="text"></td>
+								<td>怀孕周数：</td>
+								<td>
+									<input class="input input_small" type="text" value="5" id="showEditZhou">周
+									<div class="box_edit_zhou">
+										修改前的内容为：<br>
+										<input class="input input_small" value="6">周
+										<div class="td_oper">
+											<span>还原</span>
+											<span>确定</span>
+										</div>
+									</div>
+									<img class="icon_hui" src="../styles/images/icon_hui.png">
+								</td>
+							</tr>
+						</table>
+					
+						<div class="box_table">
+							<div class="table_sub_titles"><img class="btn_calc" src="../styles/images/yinjiu.png"></div>
+							<div class="list_oper top_position">
+								<span class="icon_add" id="addYin"></span>
+								<span class="icon_delete" id="deleteYin"></span>
+							</div>
+							<table class="fw_table fw_table_noborder" id="addTableYin">
+								<tr class="t_head">
+									<td>饮酒类型</td>
+									<td>酒精含量（度）</td>
+									<td>饮酒量（毫升/周）</td>
+									<td>饮酒年数</td>
+									<td>备注</td>
+								</tr>
+								<tr>
+									<td>
+										<select class="select" id="showTips">
+											<option value="白酒">白酒</option>
+											<option value="白酒">红酒</option>
+										</select>
+									</td>
+									<td><input class="input" type="text" value="52"></td>
+									<td><input class="input" type="text" value="800ml/周"></td>
+									<td><input class="input" type="text" value="3年"></td>
+									<td><input class="input" type="text"></td>
+								</tr>
+							</table>
+							<div class="gaozhi">告知事项</div>
+							<textarea class="text_area"></textarea>
+						</div>
+					</div>
+				</div>
+				<!--form_group e-->
+				
+				<!--form_group s-->
+				<div class="form_group">
+					<div class="form_bottom">
+						<table class="pop_table fw_table_noborder">
+							<tr>
+								<td width="100">核保结论：</td>
+								<td class="table_span_orange">
+									<select class="select">
+								        <option value="PASS">PASS</option>
+								        <option value="下发照会">下发照会</option>
+								        <option value="拒保">拒保</option>
+							        </select>
+								</td>
+							</tr>
+							<tr>
+								<td valign="top">核保意见：</td>
+								<td class="table_span_orange">
+									<textarea class="text_area text_area_small" id="areaYiJian"></textarea>
+									<ul class="list_dialog">
+										<li>常用语</li>
+										<li>核保意见</li>
+										<li>下发照会下发照会</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<div class="td_oper has_btn_style">
+							<span>确定</span>
+							<span class="cancel">返回</span>
+						</div>
+					</div>
+				</div>
+				<!--form_group e-->
+			</div>
+			<!--bd_info_con 保单基本信息 e-->
+			
+			<!--bd_info_con 生存调查通知单 s-->
+			<div class="bd_info_con">
+				<!--form_group s-->
+				<div class="form_group">
+					<div class="table_title">调查列表<span class="arrows arrows_down"></span></div>
+					<div class="slide_table">
+						<table class="fw_table fw_table_noborder">
+							<tr class="t_head">
+								<td>调查编号</td>
+								<td>下发时间</td>
+								<td>反馈时间</td>
+								<td>任务状态</td>
+								<td>资料是否录入</td>
+								<td>描述信息</td>
+								<td>调查员</td>
+								<td>操作</td>
+							</tr>
+							<tr>
+								<td>DC00101</td>
+								<td>2017/08/01</td>
+								<td>2017/08/08</td>
+								<td>待反馈</td>
+								<td>否</td>
+								<td>待反馈</td>
+								<td>张三</td>
+								<td class="td_oper"><span>撤销</span></td>
+							</tr>
+							<tr>
+								<td>DC00101</td>
+								<td>2017/08/01</td>
+								<td>2017/08/08</td>
+								<td>待反馈</td>
+								<td>否</td>
+								<td>待反馈</td>
+								<td>张三</td>
+								<td class="td_oper"><span>撤销</span></td>
+							</tr>
+							<tr>
+								<td>DC00101</td>
+								<td>2017/08/01</td>
+								<td>2017/08/08</td>
+								<td>待反馈</td>
+								<td>否</td>
+								<td>待反馈</td>
+								<td>张三</td>
+								<td class="td_oper"><span>撤销</span></td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="table_title">调查对象<span class="arrows arrows_down"></span></div>
+					<div class="slide_table">
+						<div class="box_radio">
+							<input type="radio" name="radio" id="touRadio"><label for="touRadio">投保人</label>
+							<input type="radio" name="radio" id="beiRadio"><label for="beiRadio">被保人</label>
+							<input type="radio" name="radio" id="otherRadio"><label for="otherRadio">其他</label>
+						</div>
+						<table class="fw_table fw_table_noborder">
+							<tr class="t_head">
+								<td>姓名</td>
+								<td>证件号码</td>
+								<td>联系方式</td>
+								<td>联系地址</td>
+							</tr>
+							<tr>
+								<td>张三</td>
+								<td>410968***2428</td>
+								<td>18666739879</td>
+								<td>北京市西城区西直门外大街366号</td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="table_title">调查要求<span class="arrows arrows_down"></span></div>
+					<div class="slide_table">
+						<div class="box_yaoqiu">
+							<textarea class="text_area">***************************************************************************</textarea>
+						</div>
+					</div>
+					<div class="box_btn">
+						<button class="btn_submit">提交</button>
+					</div>
+				</div>
+				<!--form_group e-->
+			</div>
+			<!--bd_info_con 生存调查通知单 e-->
+			
+			<!--bd_info_con 影响信息 s-->
+			<div class="bd_info_con">3</div>
+			<!--bd_info_con 影响信息 e-->
+			
+			<!--bd_info_con 历史保单信息 s-->
+			<div class="bd_info_con">4</div>
+			<!--bd_info_con 历史保单信息 e-->
+			
+			<!--bd_info_con 操作历史 s-->
+			<div class="bd_info_con">5</div>
+			<!--bd_info_con 操作历史 e-->
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.ztree.core.min.js"></script>
+<script type="text/javascript" src="../scripts/global.js"></script>
+</body>
+</html>
