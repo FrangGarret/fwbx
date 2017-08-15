@@ -250,6 +250,7 @@ h1,h2,h3,h4,h5{
 	margin-bottom:10px;
 	border-radius:2px;
 	transition:border linear 0.2s, box-shadow linear 0.2s;
+	font-size:16px;
 }
 .text_area:focus{
 	border:1px solid #ccc;
@@ -431,18 +432,23 @@ ul, ol, dl { list-style: none; }
 }
 .list_dialog{
 	position:absolute;
-	width:100%;
+	width:97.5%;
 	box-sizing:border-box;
-	padding:10px 0;
 	background:#fff;
 	border:1px solid #999;
+	bottom:119px;
+	display:none;
 }
 .list_dialog li{
-	margin:auto 10px;
 	line-height:30px;
 	text-align:left;
 	border-bottom:1px solid #ccc;
 	font-size:16px;
+	text-indent:10px;
+	cursor:pointer;
+}
+.list_dialog li:hover{
+	background:#ccc;
 }
 .list_dialog li:last-child{
 	border-bottom:none;

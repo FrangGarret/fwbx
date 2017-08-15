@@ -28,6 +28,7 @@ $(function(){
 	$("#addShou").on("click",function(){
 		var htmls = $("#addTable tr").eq(1).clone();
 		$("#addTable").append(htmls);
+		$(".has_tip").hide();
 	});
 	$("#deleteShou").on("click",function(){
 		if($("#addTable tr").length > 2){
@@ -38,6 +39,7 @@ $(function(){
 	$("#addYin").on("click",function(){
 		var htmls = $("#addTableYin tr").eq(1).clone();
 		$("#addTableYin").append(htmls);
+		$(".has_tip").hide();
 	});
 	$("#deleteYin").on("click",function(){
 		if($("#addTableYin tr").length > 2){
@@ -47,24 +49,25 @@ $(function(){
 	
 	var tip = '<span class="has_tip">A10010</span>';
 	$(".fw_table .input,.fw_table_form .input,.fw_table .select,.fw_table_form .select").parent().append(tip);
+	$("#jiu .has_tip").attr("id","tipYinJiu").show();
 	$(".fw_table .input,.fw_table_form .input,.fw_table .select,.fw_table_form .select").change(function(){
 		$(this).parent().find(".has_tip").show();
 	});
-	$(".has_tip").on("mouseout",function(){
+	$(".fw_table").on("mouseout",".has_tip",function(){
 		$(this).hide();
 	})
 	var tipCon = '<div class="show_tip_con">客户（张三）因健康原因（饮酒），转为体检件。</div>';
 	$("#showTips").change(function(){
-		$(this).parent().css("background","#fff").find(".has_tip").attr("id","tipYinJiu");
-		$("#tipYinJiu").hover(function(){
-			$(this).parent().append(tipCon);
-			$(".panel").css("overflow","hidden").append(bgPpo);
-		},function(){
-			$(this).parent().css("background","none");
-			$(".show_tip_con").remove();
-			$(".panel").css("overflow","auto");
-			$(".bg_pop").remove();
-		});
+		$(this).parent().css("background","#fff");
+	});
+	$("#tipYinJiu").hover(function(){
+		$(this).parent().append(tipCon);
+		$(".panel").css("overflow","hidden").append(bgPpo);
+	},function(){
+		$(this).parent().css("background","none");
+		$(".show_tip_con").remove();
+		$(".panel").css("overflow","auto");
+		$(".bg_pop").remove();
 	});
 	
 	$("#showEditZhou").focus(function(){
@@ -81,6 +84,17 @@ $(function(){
 	
 	$("#getFuJiaXian").on("click",function(){
 		$(".box_tree").show();
+	});
+
+	$("#areaYiJian").on("click",function(){
+		$(".list_dialog").show();
+	});
+	var getVal = '';
+	$(".list_dialog li").on("click",function(){
+		getVal = $("#areaYiJian").val();
+		getVal += $(this).text();
+		$("#areaYiJian").val(getVal);
+		$(this).parent().hide();
 	});
 });
 
