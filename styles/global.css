@@ -453,3 +453,6 @@ ul, ol, dl { list-style: none; }
 .list_dialog li:last-child{
 	border-bottom:none;
 }
+.select_citys{
+	width:30%;
+}
