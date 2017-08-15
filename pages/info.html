@@ -9,15 +9,57 @@
 <meta name="keywords" content="">
 <link href="../styles/global.css" rel="stylesheet">
 <link rel="stylesheet" href="../styles/zTreeStyle.css">
+<link rel="stylesheet" href="../css/photoswipe.css"> 
+<link rel="stylesheet" href="../css/default-skin.css">
 <style>
     .header{
-        background-color: #333;
+    	position:fixed;
+    	width:100%;
+        background-color: #fff;
         height: 64px;
+        border-bottom:1px solid #ccc;
+        z-index:99999;
     }
     .header-box{
         width: 1200px;
         height: 100%;
         margin: 0 auto;
+    }
+    .box_logo{
+    	height:64px;
+        padding-left:220px;
+        height: 100%;
+        background: url(../images/logo.png) left center no-repeat;
+        background-size:209px 55px;
+        line-height:64px;
+        font-size: 26px;
+        letter-spacing: 2px;
+        font-weight: inherit;
+        float:left;
+    }
+    .box_link{
+    	margin-left:20px;
+    	height:64px;
+    	line-height:64px;
+        float:left;
+    }
+    .box_link a{
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 17px;
+    }
+    .box_link a:hover{
+        color: #f2862c;
+    }
+    .box_link a.nowType{
+        color: #f2862c;
+        font-size: 20px;
+    }
+    .box_tel_info{
+        padding-top:10px;
+    	float:right;
     }
     .header-box ul{
         font-size: 0px;
@@ -161,164 +203,177 @@
     .title span{
         margin: 0 10px;
     }
+        .photo-search label{
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .photo-search select{
+            outline: none;
+            width: 200px;
+            height: 30px;
+        }
+
+        .photo-search button{
+            font-size: 14px;
+            background-color: #f2862c;
+            border:none;
+            outline: none;
+            color: #fff;
+            padding: 0 16px;
+            margin: 0 6px;
+            height: 31px;
+            border-radius: 3px;
+            letter-spacing: 1px;
+            position: relative;
+            top: 2px;
+            cursor: pointer;
+        }
+        .photo-search button:hover{
+            background-color: #d97828;
+        }
+
+        .my-gallery{
+            padding: 20px 10px;
+        }
+        .my-gallery figure{
+            display: inline-block;
+            margin: 0 0 15px 0;
+            float: left;
+            font-size: 0px;
+            width: 30%;
+            
+        }
+        .my-gallery figure.fg{
+            margin:0 15px;
+             
+        }
+
+        .my-gallery figure div,
+        .my-gallery figure a,
+        .my-gallery figure img{
+            font-size: 0px;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cont {
+            margin: 20px;
+        }
+
+        .lpinfo {
+            position: absolute;
+            right: 136px;
+            top: 26px;
+            display: none;
+            background:#fff;
+            z-index:999999;
+            padding:5px;
+        }
+
+        .lpinfo table {
+            background: #f3f3f3;
+            font-size: 10px;
+            width: 1000px;
+        }
+
+        .lpinfo th {
+            background: #1991d8;
+            padding: 5px;
+            color: #fff;
+        }
+		.has_blue{
+			background: #1991d8;
+		}
+        .lpinfo div span {
+            float: left;
+            font-size: 14px;
+            font-weight: 600;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            width: 400px;
+            text-align: left;
+        }
+
+        .lpinfo div img {
+            float: right;
+        }
+
+        .rlt {
+            position: relative;
+        }
 </style>
 </head>
 <body>
 <div class="panel">
+	<div class="header">
+	    <div class="header-box">
+	    	<div class="box_logo">核保系统</div>
+	    	<div class="box_link">
+	    		<a href="../index.html">任务工作台</a>
+	            <span>|</span>
+	            <a class="nowType">保单详细信息</a>
+	    	</div>
+	    	<div class="box_tel_info">
+	    		<div><span>24小时热线服务</span></div>
+	            <div>
+	                <span class="ic-phone"></span>
+	                <span>3123 3123</span>
+	            </div>
+	    	</div>
+	    </div>
+	</div>
 	
-<div class="header">
-    <div class="header-box">
-        <ul>
-            <li>
-                <strong>核保系统</strong>
-                <i></i>
-            </li>
-            <li>
-                <div class="input-box">
-                    <input type="text" name="" value="" placeholder="三年息 储蓄保险">
-                    <a href="javascript:;"></a>
-                </div>
-                
-                <button>登录</button>
-                <button>注册</button>
-            </li>
-           
-            <li>
-                <div><span>24小时热线服务</span></div>
-                <div>
-                    <span class="ic-phone"></span>
-                    <span>3123 3123</span>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="container">
-    <div class="title">
-        <ul>
-            <li>
-                <i></i>
-            </li>
-            <li>
-                <a href="../index.html">任务工作台</a>
-                <span>|</span>
-                <a href="javascript:;" class="nowType">保单详细信息</a>
-            </li>
-        </ul>
-        <div class="clear"></div>
-    </div>
-</div>
-	<div class="fw_main_content">
-		<!--bd_info_top s-->
-		<div class="bd_info_top">
-			<ul class="info_nav">
-				<li class="current"><a>保单信息</a></li>
-				<li><a>生存调查通知单</a></li>
-				<li><a>影像信息</a></li>
-				<li><a>历史保单信息</a></li>
-				<li><a>操作历史</a></li>
-			</ul>
-			<div class="info_top_r">
-				<div class="box_table">
-					<div class="table_title">照会信息</div>
-					<button class="button" id="xiaFa">下发照会</button>
-					<button class="button" id="piLiang">批量处理</button>
-					
-					<div class="xiafa_hide" id="xiaFaHide">
-						<div class="box_titles">下发处理</div>
-						<div class="box_contents">
-							<table class="pop_table fw_table_noborder">
-								<tr>
-									<td width="100">照会代码：</td>
-									<td><input class="input input_small" type="text"></td>
-									<td width="100">照会描述：</td>
-									<td><input class="input input_small" type="text"></td>
-									<td class="td_oper" width="60"><span>查询</span></td>
-								</tr>
-							</table>
-							<div class="pop_sub_title">照会列表</div>
-							<table class="fw_table">
-								<tr class="t_head">
-									<td>照会代码</td>
-									<td>照会描述</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-								</tr>
-							</table>
-							<div class="pop_sub_title">照会列表</div>
-							<textarea class="text_area"></textarea>
-							<div class="td_oper" id="hidePopSpan">
-								<span>确定</span>
-								<span class="cancel">取消</span>
-							</div>
-						</div>
-					</div>
-					
-					<div class="xiafa_hide zhaohui_hide" id="zhaoHuiHide">
-						<div class="box_titles">照会处理</div>
-						<div class="box_contents">
-							<table class="pop_table fw_table_noborder">
-								<tr>
-									<td width="100">照会状态：</td>
-									<td>
-										<select class="select">
-											<option value="空">空</option>
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<td>照会描述：</td>
-									<td>
-										<textarea class="text_area text_area_small"></textarea>
-									</td>
-								</tr>
-							</table>
-							<div class="td_oper" id="hidePopSpanZh">
-								<span>确定</span>
-								<span class="cancel">取消</span>
-							</div>
-						</div>
-					</div>
-					
-					<table class="fw_table">
-						<tr class="t_head">
-							<td>照会ID</td>
-							<td>照会描述</td>
-							<td>照会等级</td>
-							<td>照会状态</td>
-							<td>照会操作</td>
-						</tr>
-						<tr>
-							<td>A1121</td>
-							<td>客户（张三）因健康原因（饮酒），转为体检件</td>
-							<td>Waring</td>
-							<td>已下发</td>
-							<td class="td_oper">
-								<span>查看</span>
-								<span>处理</span>
-							</td>
-						</tr>
-						<tr>
-							<td>B1012</td>
-							<td>被保人（张三）年龄大于71岁，财务核保要求，请人工审核。</td>
-							<td>Waring</td>
-							<td>已下发</td>
-							<td class="td_oper">
-								<span>查看</span>
-								<span>处理</span>
-							</td>
-						</tr>
-					</table>
-				</div>
+	<!--bd_info_top s-->
+	<div class="bd_info_top">
+		<ul class="info_nav">
+			<li class="current"><a>保单信息</a></li>
+			<li><a>生存调查通知单</a></li>
+			<li><a>影像信息</a></li>
+			<li><a>历史保单信息</a></li>
+			<li><a>操作历史</a></li>
+		</ul>
+		<div class="info_top_r">
+			<div class="box_table">
+				<div class="table_title">照会信息</div>
+				<button class="button" id="xiaFa">下发照会</button>
+				<button class="button" id="piLiang">批量处理</button>
+				
+				<table class="fw_table">
+					<tr class="t_head">
+						<td>照会ID</td>
+						<td>照会描述</td>
+						<td>照会等级</td>
+						<td>照会状态</td>
+						<td>照会操作</td>
+					</tr>
+					<tr>
+						<td>A1121</td>
+						<td>客户（张三）因健康原因（饮酒），转为体检件</td>
+						<td>Waring</td>
+						<td>已下发</td>
+						<td class="td_oper">
+							<span>查看</span>
+							<span>处理</span>
+						</td>
+					</tr>
+					<tr>
+						<td>B1012</td>
+						<td>被保人（张三）年龄大于71岁，财务核保要求，请人工审核。</td>
+						<td>Waring</td>
+						<td>已下发</td>
+						<td class="td_oper">
+							<span>查看</span>
+							<span>处理</span>
+						</td>
+					</tr>
+				</table>
 			</div>
 		</div>
-		<!--bd_info_top e-->
+	</div>
+	<!--bd_info_top e-->
+	<div class="fw_main_content">
 		
 		<div class="info_nav_contents">
 			<!--bd_info_con 保单基本信息 s-->
@@ -332,7 +387,7 @@
 								<td width="160">投保单号/保单号：</td>
 								<td><input class="input" type="text" value="A28718181"></td>
 								<td width="170">生效日期：</td>
-								<td><input class="input input_date" type="text" value="2017-08-11" readonly="readonly"></td>
+								<td id="showDateTips"><input class="input input_date" type="text" value="2017-08-11" readonly="readonly" id="date_demo3"></td>
 								<td width="160">收单日：</td>
 								<td><input class="input input_date" type="text" value="2017-08-11" readonly="readonly"></td>
 							</tr>
@@ -381,7 +436,7 @@
 					<div class="table_title">客户信息<span class="arrows arrows_down"></span></div>
 					<div class="slide_table">
 						<div class="box_user_info">
-							<img src="../styles/images/icon_bei.png">
+							<img width="100" src="../styles/images/icon_bei.png">
 						</div>
 						<table class="fw_table_form">
 							<tr>
@@ -464,7 +519,7 @@
 						</table>
 						
 						<div class="box_user_info">
-							<img src="../styles/images/icon_tou.png">
+							<img width="100" src="../styles/images/icon_tou.png">
 						</div>
 						<table class="fw_table_form">
 							<tr>
@@ -536,7 +591,7 @@
 						</table>
 						
 						<div class="box_user_info">
-							<img src="../styles/images/icon_shouyi.png">
+							<img width="100" src="../styles/images/icon_shouyi.png">
 						</div>
 						<div class="box_table">
 							<div class="list_oper">
@@ -836,21 +891,365 @@
 			<!--bd_info_con 生存调查通知单 e-->
 			
 			<!--bd_info_con 影响信息 s-->
-			<div class="bd_info_con">3</div>
+			<div class="bd_info_con">
+				<div class="photo-box"> 
+			        <div class="photo-title"></div>
+			        <div class="photo-search">
+			            <label>
+			                <span>条件一：</span>
+			                <select>
+			                    <option value="">1</option>
+			                </select>
+			            </label>
+			            <label >
+			                <span>条件二：</span>
+			                <select>
+			                    <option value="">1</option>
+			                </select>
+			            </label>
+			            <button>查询</button>
+			        </div>
+			        
+			        <div class="my-gallery" data-pswp-uid="1">
+			                            
+			            <figure>
+			                <div>
+			                    <a href="../img/p1.jpg" data-size="1036x640">
+			                        <img  src="../img/p1.jpg">
+			                    </a>
+			                </div>
+			            </figure>
+			            <figure class="fg">
+			                <div>
+			                    <a href="../img/p2.jpg" data-size="1036x640">
+			                        <img src="../img/p2.jpg">
+			                    </a>
+			                </div>
+			            </figure>
+			            <figure>
+			                <div>
+			                    <a href="../img/p3.jpg" data-size="1036x640">
+			                        <img  src="../img/p3.jpg">
+			                    </a>
+			                </div>
+			            </figure>
+			            <figure>
+			                <div>
+			                    <a href="../img/p4.jpg" data-size="1036x640">
+			                        <img  src="../img/p4.jpg">
+			                    </a>
+			                </div>
+			            </figure>
+			            <figure class="fg">
+			                <div>
+			                    <a href="../img/p5.jpg" data-size="1036x640">
+			                        <img  src="../img/p5.jpg">
+			                    </a>
+			                </div>
+			            </figure>
+			            <figure>
+			                <div>
+			                    <a href="../img/p6.jpg" data-size="1036x640">
+			                        <img  src="../img/p6.jpg">
+			                    </a>
+			                </div>
+			            </figure>
+			        </div>
+			        
+			        
+			    </div>
+			
+			    <!-- 图片预览  start -->
+				<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" id='photo' >
+				    <div class="pswp__bg"></div>
+				    <div class="pswp__scroll-wrap">
+				        <div class="pswp__container">
+				            <div class="pswp__item"></div>
+				            <div class="pswp__item"></div>
+				            <div class="pswp__item"></div>
+				        </div>
+				        <div class="pswp__ui pswp__ui--hidden">
+				            <div class="pswp__top-bar">
+				                <div class="pswp__counter"></div>
+			
+				                <button class="pswp__button pswp__button--close" title="关闭"></button>
+			                    <button class="pswp__button pswp__button--fs" title="全屏"></button>
+			                    <button class="pswp__button pswp__button--zoom" title="缩放"></button>
+				                <div class="pswp__preloader">
+				                    <div class="pswp__preloader__icn">
+				                      <div class="pswp__preloader__cut">
+				                        <div class="pswp__preloader__donut"></div>
+				                      </div>
+				                    </div>
+				                </div>
+				            </div>
+			
+				            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				                <div class="pswp__share-tooltip"></div> 
+				            </div>
+			                <button class="pswp__button pswp__button--arrow--left" title="上一张"></button>
+			                <button class="pswp__button pswp__button--arrow--right" title="下一张"></button>
+				            <div class="pswp__caption">
+				                <div class="pswp__caption__center"></div>
+				            </div> 
+				        </div>
+				    </div>
+				</div>
+				<!-- 图片预览  end -->
+			</div>
 			<!--bd_info_con 影响信息 e-->
 			
 			<!--bd_info_con 历史保单信息 s-->
-			<div class="bd_info_con">4</div>
+			<div class="bd_info_con">
+			    <div class="item">
+			        <h3>历史保单信息</h3>
+			    </div>
+			    <div class="cont">
+			        <table class="fw_table">
+			            <tr class="t_head">
+			                <td>保单号</td>
+			                <td>签单日</td>
+			                <td>生效日</td>
+			                <td>失效日</td>
+			                <td>收单日</td>
+			                <td>承保日期</td>
+			                <td>业务员</td>
+			                <td>机构</td>
+			                <td>查看</td>
+			            </tr>
+			            <tr>
+			                <td>A2991038829</td>
+			                <td>20170505</td>
+			                <td>20170602</td>
+			                <td>20101010</td>
+			                <td>20170526</td>
+			                <td>20170602</td>
+			                <td>10099382</td>
+			                <td>上海分公司</td>
+			                <td class="rlt">
+			                    <a class="info" href="#">理赔</a>
+			                    <a href="#">影像</a>
+			                    <div class="lpinfo">
+			                        <div>
+			                            <span>理赔信息</span>
+			                            <a class="closebtn" href="#"><img src="../images/close.png" alt=""></a>
+			                        </div>
+							        <table class="fw_table">
+							            <tr class="t_head has_blue">
+			                                <td>赔案号</td>
+			                                <td>事故性质</td>
+			                                <td>出险时间</td>
+			                                <td>赔付金额</td>
+			                                <td>出险类型</td>
+			                                <td>赔付险种</td>
+			                                <td>报案时间</td>
+			                                <td>立案时间</td>
+			                                <td>结案时间</td>
+			                            </tr>
+			                            <tr>
+			                                <td><a href="#">PA01111</a></td>
+			                                <td>疾病</td>
+			                                <td>2017/01/01</td>
+			                                <td>231.21</td>
+			                                <td>电话报案</td>
+			                                <td>EA0001</td>
+			                                <td>2017/01/01</td>
+			                                <td>2017/01/01</td>
+			                                <td>2017/01/01</td>
+			                            </tr>
+			                            <tr>
+			                                <td><a href="#">PA01111</a></td>
+			                                <td>疾病</td>
+			                                <td>2017/01/01</td>
+			                                <td>231.21</td>
+			                                <td>电话报案</td>
+			                                <td>EA0001</td>
+			                                <td>2017/01/01</td>
+			                                <td>2017/01/01</td>
+			                                <td>2017/01/01</td>
+			                            </tr>
+			                        </table>
+			                    </div>
+			
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>A2991033119</td>
+			                <td>20170505</td>
+			                <td>20170602</td>
+			                <td>20101010</td>
+			                <td>20170526</td>
+			                <td>20170602</td>
+			                <td>10099382</td>
+			                <td>香港分公司</td>
+			                <td class="rlt">
+			                    <a class="info" href="#">理赔</a>
+			                    <a href="#">影像</a>
+			                    <div class="lpinfo">
+			                        <div>
+			                            <span>理赔信息</span>
+			                            <a class="closebtn" href="#"><img src="../images/close.png" alt=""></a>
+			                        </div>
+							        <table class="fw_table">
+							            <tr class="t_head has_blue">
+			                                <td>赔案号</td>
+			                                <td>事故性质</td>
+			                                <td>出险时间</td>
+			                                <td>赔付金额</td>
+			                                <td>出险类型</td>
+			                                <td>赔付险种</td>
+			                                <td>报案时间</td>
+			                                <td>立案时间</td>
+			                                <td>结案时间</td>
+			                            </tr>
+			                            <tr>
+			                                <td><a href="#">PA01111</a></td>
+			                                <td>疾病</td>
+			                                <td>2017/01/01</td>
+			                                <td>231.21</td>
+			                                <td>电话报案</td>
+			                                <td>EA0001</td>
+			                                <td>2017/01/01</td>
+			                                <td>2017/01/01</td>
+			                                <td>2017/01/01</td>
+			                            </tr>
+			                            <tr>
+			                                <td><a href="#">PA01111</a></td>
+			                                <td>疾病</td>
+			                                <td>2017/01/01</td>
+			                                <td>231.21</td>
+			                                <td>电话报案</td>
+			                                <td>EA0001</td>
+			                                <td>2017/01/01</td>
+			                                <td>2017/01/01</td>
+			                                <td>2017/01/01</td>
+			                            </tr>
+			                        </table>
+			                    </div>
+			
+			                </td>
+			            </tr>
+			        </table>
+			
+			    </div>
+			</div>
 			<!--bd_info_con 历史保单信息 e-->
 			
 			<!--bd_info_con 操作历史 s-->
-			<div class="bd_info_con">5</div>
+			<div class="bd_info_con">
+			    <div class="item">
+			        <h3>操作历史</h3>
+			    </div>
+			    <div class="cont">
+			        <table class="fw_table">
+			            <tr class="t_head">
+			                <td>操作人</td>
+			                <td>操作时间</td>
+			                <td>操作环节</td>
+			                <td>描述</td>
+			
+			            </tr>
+			            <tr>
+			                <td>张三</td>
+			                <td>20160502</td>
+			                <td>录入提交</td>
+			                <td></td>
+			
+			            </tr>
+			            <tr>
+			                <td>系统核保</td>
+			                <td>20170502</td>
+			                <td>自动核保</td>
+			                <td></td>
+			
+			            </tr>
+			            <tr>
+			                <td>张三</td>
+			                <td>20170503</td>
+			                <td>人工核保</td>
+			                <td>发生照会：AA0101,EH1012</td>
+			
+			            </tr>
+			        </table>
+			
+			    </div>
+			</div>
 			<!--bd_info_con 操作历史 e-->
+				
+			<div class="xiafa_hide zhaohui_hide" id="zhaoHuiHide">
+				<div class="box_titles">照会处理</div>
+				<div class="box_contents">
+					<table class="pop_table fw_table_noborder">
+						<tr>
+							<td width="100">照会状态：</td>
+							<td>
+								<select class="select">
+									<option value="空">空</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td valign="top">照会描述：</td>
+							<td>
+								<textarea class="text_area text_area_small"></textarea>
+							</td>
+						</tr>
+					</table>
+					<div class="td_oper" id="hidePopSpanZh">
+						<span>确定</span>
+						<span class="cancel">取消</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="xiafa_hide" id="xiaFaHide">
+					<div class="box_titles">下发处理</div>
+					<div class="box_contents">
+						<table class="pop_table fw_table_noborder">
+							<tr>
+								<td width="100">照会代码：</td>
+								<td><input class="input input_small" type="text"></td>
+								<td width="100">照会描述：</td>
+								<td><input class="input input_small" type="text"></td>
+								<td class="td_oper" width="60"><span>查询</span></td>
+							</tr>
+						</table>
+						<div class="pop_sub_title">照会列表</div>
+						<table class="fw_table">
+							<tr class="t_head">
+								<td>照会代码</td>
+								<td>照会描述</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+						<div class="pop_sub_title">照会列表</div>
+						<textarea class="text_area"></textarea>
+						<div class="td_oper" id="hidePopSpan">
+							<span>确定</span>
+							<span class="cancel">取消</span>
+						</div>
+					</div>
+				</div>
+				
 		</div>
 	</div>
 </div>
 <script type="text/javascript" src="../scripts/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="../scripts/jquery.ztree.core.min.js"></script>
 <script type="text/javascript" src="../scripts/global.js"></script>
+<script src="../js/photoswipe.min.js" ></script>
+<script src="../js/photoswipe-ui-default.min.js" ></script>
+<script src="../js/openPhotoSwipe.js"></script>
+
+<script>
+    initPhotoSwipeFromDOM('.my-gallery');
+</script>
 </body>
 </html>

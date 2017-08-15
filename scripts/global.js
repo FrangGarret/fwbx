@@ -1,10 +1,10 @@
+var bgPpo = '<div class="bg_pop"></div>';
 $(function(){
 	$(".info_nav li").on("click",function(){
 		$(this).addClass("current").siblings().removeClass("current");
 		$(".bd_info_con").eq($(this).index()).show().siblings().hide();
 	});
 	
-	var bgPpo = '<div class="bg_pop"></div>';
 	$("#xiaFa").on("click",function(){
 		$("#xiaFaHide").show();
 		$(".panel").css("overflow","hidden").append(bgPpo);
@@ -60,10 +60,21 @@ $(function(){
 		$(this).parent().find(".has_tip").show();
 	});
 	
-	$(".fw_table").on("mouseout",".has_tip",function(){
-		$(this).hide();
-	})
-	var tipCon = '<div class="show_tip_con">客户（张三）因健康原因（饮酒），转为体检件。</div>';
+	$("#showDateTips .has_tip").show().html("B1012").attr("id","dataTipsShow");
+	//$(".fw_table_form").on("mouseout",".has_tip",function(){
+	//	$("#dataTipsShow").hide();
+	//});
+	var tipCon2 = '<div class="show_tip_con show_tip_con_1">被保人（张三）年龄大于71岁，财务核保要求，请人工审核。</div>';
+	$("#dataTipsShow").hover(function(){
+		$(this).parent().append(tipCon2);
+		$(".panel").css("overflow","hidden").append(bgPpo);
+	},function(){
+		$(this).parent().css("background","none");
+		$(".show_tip_con_1").remove();
+		$(".panel").css("overflow","auto");
+		$(".bg_pop").remove();
+	});
+	var tipCon = '<div class="show_tip_con show_tip_con_2">客户（张三）因健康原因（饮酒），转为体检件。</div>';
 	$("#showTips").change(function(){
 		$(this).parent().css("background","#fff");
 	});
@@ -72,7 +83,7 @@ $(function(){
 		$(".panel").css("overflow","hidden").append(bgPpo);
 	},function(){
 		$(this).parent().css("background","none");
-		$(".show_tip_con").remove();
+		$(".show_tip_con_2").remove();
 		$(".panel").css("overflow","auto");
 		$(".bg_pop").remove();
 	});
@@ -196,6 +207,16 @@ $(document).ready(function(){
 		}
 		$(this).parent().next().slideToggle(100);
 	});
+
+    $(".info").click(function () {
+        $(".lpinfo").stop().hide();
+        $(this).siblings(".lpinfo").stop().show();
+        $(".panel").css("overflow","hidden").append(bgPpo);
+    });
+    $(".closebtn").click(function () {
+        $(this).parent().parent().stop().hide();
+        $(".bg_pop").remove();
+    })
 });
 
 function stopEvent(event){ //阻止冒泡事件

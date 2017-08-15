@@ -44,7 +44,7 @@ h1,h2,h3,h4,h5{
 	top:0;
 	bottom:0;
 	background:rgba(0,0,0,0.4);
-	z-index:99;
+	z-index:99999;
 }
 
 /*fw_main_content*/
@@ -54,7 +54,13 @@ h1,h2,h3,h4,h5{
 	margin:auto;
 }
 .bd_info_top{
-	min-height:295px;
+	width:1200px;
+	left:50%;
+	margin-left:-600px;
+	position:fixed;
+	top:65px;
+	background:#fff;
+	z-index:99999;
 }
 .info_nav{
 	position:absolute;
@@ -64,8 +70,8 @@ h1,h2,h3,h4,h5{
 }
 .info_nav li{
 	line-height:35px;
-	margin:20px auto;
-	font-size:16px;
+	margin:5px auto;
+	font-size:14px;
 	text-indent:50px;
 	color:#333;
 	font-weight:bold;
@@ -96,11 +102,10 @@ h1,h2,h3,h4,h5{
 	position:relative;
 }
 .table_title{
-	padding-top:20px;
 	padding-left:20px;
-	margin-bottom:20px;
-	line-height:50px;
-	font-size:20px;
+	margin-bottom:10px;
+	line-height:30px;
+	font-size:16px;
 	border-bottom:1px solid #999999;
 	font-weight:bold;
 	position:relative;
@@ -110,8 +115,8 @@ h1,h2,h3,h4,h5{
 	padding:5px 20px;
 	background:#efeff4;
 	border:none;
-	font-size:18px;
-	margin:auto 10px 20px 10px;
+	font-size:14px;
+	margin:auto 10px 10px 10px;
 	cursor:pointer;
 	border-radius:2px;
 }
@@ -123,12 +128,12 @@ h1,h2,h3,h4,h5{
 	height:36px;
 	border:1px solid #999;
 	text-align:center;
-	font-size:14px;
+	font-size:12px;
 	position:relative;
 }
 .fw_table tr.t_head td,.pop_table tr.t_head td{
 	font-weight:bold;
-	font-size:16px;
+	font-size:12px;
 }
 .td_oper{
 	text-align:center;
@@ -153,7 +158,7 @@ h1,h2,h3,h4,h5{
 	margin-bottom:20px;
 }
 .fw_table_form tr td{
-	font-size:16px;
+	font-size:12px;
 	padding:10px 0;
 	position:relative;
 }
@@ -188,7 +193,7 @@ h1,h2,h3,h4,h5{
 	width:100%;
 	box-sizing:border-box;
 	height:28px;
-	font-size:16px;
+	font-size:12px;
 	padding:0;
 	transition:border linear 0.2s, box-shadow linear 0.2s;
 }
@@ -197,7 +202,6 @@ h1,h2,h3,h4,h5{
 	box-shadow:0 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .box_user_info{
-	padding:20px;
 	text-align:center;
 }
 .user_info_title{
@@ -226,6 +230,7 @@ h1,h2,h3,h4,h5{
 	top:-60px;
 }
 .btn_calc{
+	width:70px;
 	cursor:pointer;
 }
 .input_small{
@@ -250,7 +255,7 @@ h1,h2,h3,h4,h5{
 	margin-bottom:10px;
 	border-radius:2px;
 	transition:border linear 0.2s, box-shadow linear 0.2s;
-	font-size:16px;
+	font-size:12px;
 }
 .text_area:focus{
 	border:1px solid #ccc;
@@ -270,7 +275,7 @@ h1,h2,h3,h4,h5{
 	z-index:9999;
 }
 .show_tip_con{
-	font-size:16px;
+	font-size:12px;
 	background:#fff;
 	width:200px;
 	height:50px;
@@ -286,7 +291,7 @@ h1,h2,h3,h4,h5{
 	padding:10px 20px 0 20px;
 	background:#fff;
 	text-align:center;
-	font-size:16px;
+	font-size:12px;
 	line-height:40px;
 	display:none;
 	top:56px;
@@ -302,31 +307,29 @@ h1,h2,h3,h4,h5{
 	position:fixed;
 	top:50%;
 	left:50%;
-	z-index:999999;
+	z-index:999999999;
 	transform:translate(-50%,-50%);
-}
-.xiafa_hide{
-	width:750px;
+	width:650px;
 	background:#fff;
 	display:none;
 }
 .box_titles{
 	height:52px;
 	line-height:52px;
-	font-size:20px;
+	font-size:16px;
 	background:#333;
 	padding:0 20px;
 	color:#fff;
 }
 .box_contents{
 	padding:0 20px 10px 20px;
-	font-size:18px;
+	font-size:14px;
 }
 .pop_sub_title{
-	padding:10px 0;
+	padding:5px 0;
 }
 .pop_table tr td{
-	font-size:18px;
+	font-size:14px;
 }
 span.cancel{
 	color:#999999;
@@ -360,17 +363,17 @@ span.cancel{
 }
 .box_radio{
 	padding:20px;
-	font-size:16px;
+	font-size:12px;
 }
 .box_radio input,.box_radio label{
 	display:inline-block;
 	vertical-align:middle;
 	cursor:pointer;
 }
-.box_radio input{
+/*.box_radio input{
 	width:20px;
 	height:20px;
-}
+}*/
 .box_radio label{
 	margin:auto 30px auto 10px;
 }
@@ -383,9 +386,11 @@ span.cancel{
 	text-align:center;
 }
 .btn_submit{
+	cursor:pointer;
+	outline:none;
 	padding:5px 30px;
 	color:#fff;
-	font-size:18px;
+	font-size:14px;
 	background:#f2862c;
 	border-radius:2px;
 	border:none;
@@ -403,28 +408,13 @@ span.cancel{
 .clear{
 	clear:both;
 }
-* { -ms-word-wrap: break-word; word-wrap: break-word; }
-html { -webkit-text-size-adjust: none; text-size-adjust: none; }
-html, body {height:100%;width:100%; }
-html, body, h1, h2, h3, h4, h5, h6, div, ul, ol, li, dl, dt, dd, iframe, textarea, input, button, p, strong, b, i, a, span, del, pre, table, tr, th, td, form, fieldset, .pr, .pc { margin: 0; padding: 0; word-wrap: break-word; font-family: verdana,Microsoft YaHei,Tahoma,sans-serif; *font-family: Microsoft YaHei,verdana,Tahoma,sans-serif; }
-body, ul, ol, li, dl, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, .pr, .pc, em, del { font-style: normal; font-size: 100%; }
-ul, ol, dl { list-style: none; }
-._citys { width: 450px; display: inline-block; border: 2px solid #eee; padding: 5px; position: relative; }
-._citys span { color: #56b4f8; height: 15px; width: 15px; line-height: 15px; text-align: center; border-radius: 3px; position: absolute; right: 10px; top: 10px; border: 1px solid #56b4f8; cursor: pointer; }
-._citys0 { width: 100%; height: 34px; display: inline-block; border-bottom: 2px solid #56b4f8; padding: 0; margin: 0; }
-._citys0 li { display: inline-block; line-height: 34px; font-size: 15px; color: #888; width: 80px; text-align: center; cursor: pointer; }
-.citySel { background-color: #56b4f8; color: #fff !important; }
-._citys1 { width: 100%; display: inline-block; padding: 10px 0; }
-._citys1 a { width: 83px; height: 35px; display: inline-block; background-color: #f5f5f5; color: #666; margin-left: 6px; margin-top: 3px; line-height: 35px; text-align: center; cursor: pointer; font-size: 13px; overflow: hidden; }
-._citys1 a:hover { color: #fff; background-color: #56b4f8; }
-.AreaS { background-color: #56b4f8 !important; color: #fff !important; }
 
 .arrows{
 	display:inline-block;
-	width:50px;
-	height:50px;
+	width:30px;
+	height:30px;
 	right:0;
-	top:20px;
+	top:0;
 	position:absolute;
 	cursor:pointer;
 	transition:transform 100ms;
@@ -443,7 +433,7 @@ ul, ol, dl { list-style: none; }
 	line-height:30px;
 	text-align:left;
 	border-bottom:1px solid #ccc;
-	font-size:16px;
+	font-size:12px;
 	text-indent:10px;
 	cursor:pointer;
 }
@@ -455,4 +445,9 @@ ul, ol, dl { list-style: none; }
 }
 .select_citys{
 	width:30%;
+}
+.info_nav_contents{
+	position:absolute;
+	width:100%;
+	top:252px;
 }
