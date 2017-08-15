@@ -28,7 +28,7 @@ $(function(){
 	$("#addShou").on("click",function(){
 		var htmls = $("#addTable tr").eq(1).clone();
 		$("#addTable").append(htmls);
-		$(".has_tip").hide();
+		$("#addTable tr").eq($("#addTable tr").length-1).find(".has_tip").hide();
 	});
 	$("#deleteShou").on("click",function(){
 		if($("#addTable tr").length > 2){
@@ -39,7 +39,7 @@ $(function(){
 	$("#addYin").on("click",function(){
 		var htmls = $("#addTableYin tr").eq(1).clone();
 		$("#addTableYin").append(htmls);
-		$(".has_tip").hide();
+		$("#addTableYin tr").eq($("#addTableYin tr").length-1).find(".has_tip").hide();
 	});
 	$("#deleteYin").on("click",function(){
 		if($("#addTableYin tr").length > 2){
@@ -50,9 +50,16 @@ $(function(){
 	var tip = '<span class="has_tip">A10010</span>';
 	$(".fw_table .input,.fw_table_form .input,.fw_table .select,.fw_table_form .select").parent().append(tip);
 	$("#jiu .has_tip").attr("id","tipYinJiu").show();
-	$(".fw_table .input,.fw_table_form .input,.fw_table .select,.fw_table_form .select").change(function(){
+	$(".fw_table .input,.fw_table_form .input,.fw_table .select,.fw_table_form .select").on("change",function(){
 		$(this).parent().find(".has_tip").show();
 	});
+	$(".fw_table").on("change",".select",function(){
+		$(this).parent().find(".has_tip").show();
+	});
+	$(".fw_table").on("input",".select",function(){
+		$(this).parent().find(".has_tip").show();
+	});
+	
 	$(".fw_table").on("mouseout",".has_tip",function(){
 		$(this).hide();
 	})
