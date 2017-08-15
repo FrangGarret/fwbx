@@ -327,48 +327,50 @@
 	
 	<!--bd_info_top s-->
 	<div class="bd_info_top">
-		<ul class="info_nav">
-			<li class="current"><a>保单信息</a></li>
-			<li><a>生存调查通知单</a></li>
-			<li><a>影像信息</a></li>
-			<li><a>历史保单信息</a></li>
-			<li><a>操作历史</a></li>
-		</ul>
-		<div class="info_top_r">
-			<div class="box_table">
-				<div class="table_title">照会信息</div>
-				<button class="button" id="xiaFa">下发照会</button>
-				<button class="button" id="piLiang">批量处理</button>
-				
-				<table class="fw_table">
-					<tr class="t_head">
-						<td>照会ID</td>
-						<td>照会描述</td>
-						<td>照会等级</td>
-						<td>照会状态</td>
-						<td>照会操作</td>
-					</tr>
-					<tr>
-						<td>A1121</td>
-						<td>客户（张三）因健康原因（饮酒），转为体检件</td>
-						<td>Waring</td>
-						<td>已下发</td>
-						<td class="td_oper">
-							<span>查看</span>
-							<span>处理</span>
-						</td>
-					</tr>
-					<tr>
-						<td>B1012</td>
-						<td>被保人（张三）年龄大于71岁，财务核保要求，请人工审核。</td>
-						<td>Waring</td>
-						<td>已下发</td>
-						<td class="td_oper">
-							<span>查看</span>
-							<span>处理</span>
-						</td>
-					</tr>
-				</table>
+		<div class="info_top_con">
+			<ul class="info_nav">
+				<li class="current"><a>保单信息</a></li>
+				<li><a>生存调查通知单</a></li>
+				<li><a>影像信息</a></li>
+				<li><a>历史保单信息</a></li>
+				<li><a>操作历史</a></li>
+			</ul>
+			<div class="info_top_r">
+				<div class="box_table">
+					<div class="table_title">照会信息</div>
+					<button class="button btn_submit" id="xiaFa">下发照会</button>
+					<button class="button btn_submit" id="piLiang">批量处理</button>
+					
+					<table class="fw_table">
+						<tr class="t_head">
+							<td>照会ID</td>
+							<td>照会描述</td>
+							<td>照会等级</td>
+							<td>照会状态</td>
+							<td>照会操作</td>
+						</tr>
+						<tr>
+							<td>A1121</td>
+							<td>客户（张三）因健康原因（饮酒），转为体检件</td>
+							<td>Waring</td>
+							<td>已下发</td>
+							<td class="td_oper">
+								<span>查看</span>
+								<span>处理</span>
+							</td>
+						</tr>
+						<tr>
+							<td>B1012</td>
+							<td>被保人（张三）年龄大于71岁，财务核保要求，请人工审核。</td>
+							<td>Waring</td>
+							<td>已下发</td>
+							<td class="td_oper">
+								<span>查看</span>
+								<span>处理</span>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -653,8 +655,12 @@
 								<td width="100">主险：</td>
 								<td width="300">
 									<select class="select">
-								        <option value="AA0101-金护一生A款">AA0101-金护一生A款</option>
-			          					<option value="EH1012-金护一生E款">EH1012-金护一生E款</option>
+								        <option value="HYB01N稳赢一生-A款">HYB01N稳赢一生-A款</option>
+								        <option value="HBILP01N	附加稳赢一生A款终身寿险(投资连结型)">HBILP01N	附加稳赢一生A款终身寿险(投资连结型)</option>
+								        <option value="ETR05附加加惠五年期定期寿险">ETR05	附加加惠五年期定期寿险</option>
+								        <option value="LADD30自选计划">LADD30自选计划</option>
+								        <option value="3YLHI30附加添益住院给付医疗保险-住院给付">3YLHI30附加添益住院给付医疗保险-住院给付</option>
+								        <option value="3YLICU30	附加添益住院给付医疗保险-重症监护给付">3YLICU30附加添益住院给付医疗保险-重症监护给付</option>
 									</select>
 								</td>
 								<td width="100">附加险：</td>
@@ -1221,12 +1227,12 @@
 								<td>照会描述</td>
 							</tr>
 							<tr>
-								<td></td>
-								<td></td>
+								<td>M029</td>
+								<td>客户()因健康原因(饮酒)，转为体检件，请登录ISP系统-体检管理支持系统预约体检</td>
 							</tr>
 							<tr>
-								<td></td>
-								<td></td>
+								<td>P009</td>
+								<td>客户所交保险费按投资账户分配比例分配后的投资金额不符公司规定，请调整。</td>
 							</tr>
 						</table>
 						<div class="pop_sub_title">照会列表</div>
@@ -1243,6 +1249,7 @@
 </div>
 <script type="text/javascript" src="../scripts/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="../scripts/jquery.ztree.core.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.date_input.pack.js"></script>
 <script type="text/javascript" src="../scripts/global.js"></script>
 <script src="../js/photoswipe.min.js" ></script>
 <script src="../js/photoswipe-ui-default.min.js" ></script>

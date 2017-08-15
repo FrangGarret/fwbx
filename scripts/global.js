@@ -80,24 +80,18 @@ $(function(){
 	});
 	$("#tipYinJiu").hover(function(){
 		$(this).parent().append(tipCon);
-		$(".panel").css("overflow","hidden").append(bgPpo);
 	},function(){
 		$(this).parent().css("background","none");
 		$(".show_tip_con_2").remove();
-		$(".panel").css("overflow","auto");
-		$(".bg_pop").remove();
 	});
 	
 	$("#showEditZhou").focus(function(){
 		$(".box_edit_zhou").show();
 		$(this).parent().css("background","#fff");
-		$(".panel").css("overflow","hidden").append(bgPpo);
 	});
 	$(".box_edit_zhou span").on("click",function(){
 		$(".box_edit_zhou").hide();
 		$("#showEditZhou").parent().css("background","none");
-		$(".bg_pop").remove();
-		$(".panel").css("overflow","auto");
 	});
 	
 	$("#getFuJiaXian").on("click",function(e){
@@ -216,7 +210,10 @@ $(document).ready(function(){
     $(".closebtn").click(function () {
         $(this).parent().parent().stop().hide();
         $(".bg_pop").remove();
-    })
+    });
+    
+    $('.input_date').date_input();
+    $(".date_selector").css({"z-index":"9"});
 });
 
 function stopEvent(event){ //阻止冒泡事件
