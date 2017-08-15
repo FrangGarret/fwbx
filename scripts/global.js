@@ -89,11 +89,16 @@ $(function(){
 		$(".panel").css("overflow","auto");
 	});
 	
-	$("#getFuJiaXian").on("click",function(){
+	$("#getFuJiaXian").on("click",function(e){
+		e.stopPropagation();
 		$(".box_tree").show();
 	});
+	$(".box_tree").on("click",function(e){
+		e.stopPropagation();
+	});
 
-	$("#areaYiJian").on("click",function(){
+	$("#areaYiJian").on("click",function(e){
+		e.stopPropagation();
 		$(".list_dialog").show();
 	});
 	var getVal = '';
@@ -102,6 +107,10 @@ $(function(){
 		getVal += $(this).text();
 		$("#areaYiJian").val(getVal);
 		$(this).parent().hide();
+	});
+
+	$(".list_dialog").on("click",function(e){
+		e.stopPropagation();
 	});
 });
 
@@ -172,13 +181,13 @@ function beforeClick(treeId, treeNode, clickFlag) {
 }
 
 $(document).ready(function(){
+	$(".panel").on("click",function(){
+		$(".list_dialog,.box_tree").hide();
+	});
 	$.fn.zTree.init($("#treeDemo"), setting, zNodes);
 //	$("#city").click(function (e) {
 //      SelCity(this,e);
 //  });
-	$("#areaYiJian").focus(function(){
-		
-	});
 	$(".arrows").on("click",function(){
 		if($(this).hasClass("arrows_down")){
 			$(this).removeClass("arrows_down").css({"transform":"rotate(180deg)"});
