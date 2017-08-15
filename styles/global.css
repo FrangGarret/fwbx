@@ -59,6 +59,8 @@ h1,h2,h3,h4,h5{
 	top:65px;
 	background:#fff;
 	z-index:99999;
+	padding:10px 0;
+	box-shadow: 1px 1px 5px #d0d0d0;
 }
 .info_top_con{
 	width:1200px;
@@ -134,10 +136,11 @@ h1,h2,h3,h4,h5{
 }
 .fw_table tr td,.pop_table tr td{
 	height:36px;
-	border:1px solid #999;
+	border:transparent;
 	text-align:center;
 	font-size:12px;
 	position:relative;
+	padding:0 5px;
 }
 .fw_table tr.t_head td,.pop_table tr.t_head td{
 	font-weight:bold;
@@ -154,7 +157,7 @@ h1,h2,h3,h4,h5{
 	cursor:pointer;
 }
 .bd_info_con{
-	margin-top:20px;
+	margin-top:24px;
 	padding-top:10px;
 	border-top:1px solid #999;
 	display:none;
