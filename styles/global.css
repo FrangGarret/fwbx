@@ -142,6 +142,7 @@ h1,h2,h3,h4,h5{
 .fw_table tr.t_head td,.pop_table tr.t_head td{
 	font-weight:bold;
 	font-size:12px;
+	background:rgba(255, 116, 0, 0.08);
 }
 .td_oper{
 	text-align:center;
