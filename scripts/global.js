@@ -90,15 +90,15 @@ $(function(){
 	});
 	
 	$("#getFuJiaXian").on("click",function(e){
-		e.stopPropagation();
+		stopEvent(e);
 		$(".box_tree").show();
 	});
 	$(".box_tree").on("click",function(e){
-		e.stopPropagation();
+		stopEvent(e);
 	});
 
 	$("#areaYiJian").on("click",function(e){
-		e.stopPropagation();
+		stopEvent(e);
 		$(".list_dialog").show();
 	});
 	var getVal = '';
@@ -110,7 +110,7 @@ $(function(){
 	});
 
 	$(".list_dialog").on("click",function(e){
-		e.stopPropagation();
+		stopEvent(e);
 	});
 });
 
@@ -197,3 +197,15 @@ $(document).ready(function(){
 		$(this).parent().next().slideToggle(100);
 	});
 });
+
+function stopEvent(event){ //阻止冒泡事件
+	//取消事件冒泡
+	var e=arguments.callee.caller.arguments[0]||event; //若省略此句，下面的e改为event，IE运行可以，但是其他浏览器就不兼容
+	if (e && e.stopPropagation) {
+	// this code is for Mozilla and Opera
+	e.stopPropagation();
+	} else if (window.event) {
+	// this code is for IE
+	 window.event.cancelBubble = true;
+	}
+}
