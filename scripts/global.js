@@ -14,6 +14,14 @@ $(function(){
 		$(this).parent().next('table').stop().slideToggle(300)
 	})
 	
+	//点击处理
+	$('.fw_chuli').click(function(){
+		$("#zhaoHuiHide").show();
+		$(".panel").css("overflow","hidden").append(bgPpo);
+	})
+	
+	
+	
 	$(".info_nav li").on("click",function(){
 		$(this).addClass("current").siblings().removeClass("current");
 		$(".bd_info_con").eq($(this).index()).show().siblings().hide();
@@ -69,17 +77,17 @@ $(function(){
 	var tip = '<span class="has_tip">A10010</span>';
 	$(".fw_table .input,.fw_table_form .input,.fw_table .select,.fw_table_form .select").parent().append(tip);
 	$("#jiu .has_tip").attr("id","tipYinJiu").show();
-	$(".fw_table .input,.fw_table_form .input,.fw_table .select,.fw_table_form .select").on("change",function(){
-		$(this).parent().find(".has_tip").show();
-	});
-	$(".fw_table").on("change",".select",function(){
-		$(this).parent().find(".has_tip").show();
-	});
-	$(".fw_table").on("input",".select",function(){
-		$(this).parent().find(".has_tip").show();
-	});
+//	$(".fw_table .input,.fw_table_form .input,.fw_table .select,.fw_table_form .select").on("change",function(){
+//		$(this).parent().find(".has_tip").show();
+//	});
+//	$(".fw_table").on("change",".select",function(){
+//		$(this).parent().find(".has_tip").show();
+//	});
+//	$(".fw_table").on("input",".select",function(){
+//		$(this).parent().find(".has_tip").show();
+//	});
 	
-	$("#showDateTips .has_tip").show().html("B1012").attr("id","dataTipsShow");
+	$("#shengri .has_tip").show().html("B1012").attr("id","dataTipsShow");
 	//$(".fw_table_form").on("mouseout",".has_tip",function(){
 	//	$("#dataTipsShow").hide();
 	//});

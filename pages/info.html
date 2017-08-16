@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>页面模板</title>
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+<title>核保系统-保单详细信息</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link href="../styles/global.css" rel="stylesheet">
@@ -216,7 +217,7 @@
 
         .photo-search button{
             font-size: 14px;
-            background-color: #108ee9;
+            background-color: #4ec5ff;
             border:none;
             outline: none;
             color: #fff;
@@ -404,7 +405,7 @@
 							<td>已下发</td>
 							<td class="td_oper">
 								<span class="see_yingxiang">查看</span>
-								<span>处理</span>
+								<span class="fw_chuli fw_chuli_1">处理</span>
 							</td>
 						</tr>
 						<tr>
@@ -414,7 +415,7 @@
 							<td>已下发</td>
 							<td class="td_oper">
 								<span class="see_yingxiang">查看</span>
-								<span>处理</span>
+								<span class="fw_chuli fw_chuli_2">处理</span>
 							</td>
 						</tr>
 					</table>
@@ -436,7 +437,7 @@
 							<tr>
 								<td width="160">投保单号/保单号：</td>
 								<td><input class="input" type="text" value="A28718181"></td>
-								<td width="170">出生日期：</td>
+								<td width="170">生效日期：</td>
 								<td id="showDateTips"><input class="input input_date" type="text" value="1917-08-11" readonly="readonly" id="date_demo3"></td>
 								<td width="160">收单日：</td>
 								<td><input class="input input_date" type="text" value="2017-08-11" readonly="readonly"></td>
@@ -510,7 +511,7 @@
 									</select>
 								</td>
 								<td>生日：</td>
-								<td><input class="input input_date" type="text" value="2017-08-11" readonly="readonly"></td>
+								<td id="shengri"><input class="input input_date" type="text" value="1917-08-11" readonly="readonly" ></td>
 								<td>年龄：</td>
 								<td><input class="input" type="text" value="29" readonly="readonly"></td>
 							</tr>
@@ -922,6 +923,41 @@
 							<input type="radio" name="radio" id="touRadio"><label for="touRadio">投保人</label>
 							<input type="radio" name="radio" id="beiRadio"><label for="beiRadio">被保人</label>
 							<input type="radio" name="radio" id="otherRadio"><label for="otherRadio">其他</label>
+						</div>
+						<div class="box_radio">
+							<span class="fw_diaoche_title">调查方式：</span>
+							<select name="" class="fw_diaoche_select">
+								<option value="">面唔调查</option>
+								<option value="">走访调查</option>
+								<option value="">财务调查</option>
+								<option value="">病例调查</option>
+								<option value="">综合调查</option>
+								<option value="">调阅资料</option>
+								<option value="">其他</option>
+							</select>
+							<span class="fw_diaoche_title">任务性质：</span>
+							<select name="" class="fw_diaoche_select">
+								<option value="">常规调查件</option>
+								<option value="">复杂疑难调查件</option>
+								<option value="">简易调查件</option>
+							</select>
+							<span class="fw_diaoche_title">调查类型：</span>
+							<select name="" class="fw_diaoche_select">
+								<option value="">高额件</option>
+								<option value="">健康因素</option>
+								<option value="">抽调件</option>
+								<option value="">其他</option>
+							</select>
+							<span class="fw_diaoche_title">任务子类型：</span>
+							<select name="" class="fw_diaoche_select">
+								<option value="">异常投保件</option>
+								<option value="">高额件</option>
+								<option value="">抽查件</option>
+								<option value="">复效件</option>
+								<option value="">变更件</option>
+								<option value="">契约抗辩件</option>
+							</select>
+							<span class="fw_diaoche_search">查询</span>
 						</div>
 						<table class="fw_table">
 							<tr class="t_head">
