@@ -116,7 +116,7 @@ h1,h2,h3,h4,h5{
 	margin-bottom:10px;
 	line-height:30px;
 	font-size:16px;
-	border-bottom:1px solid #999999;
+	border-bottom:2px solid #f2862c;
 	font-weight:bold;
 	position:relative;
 }
@@ -142,6 +142,9 @@ h1,h2,h3,h4,h5{
 	position:relative;
 	padding:0 5px;
 }
+.fw_table tr:nth-child(odd){
+	background: #f7f7f7;
+}
 .fw_table tr.t_head td,.pop_table tr.t_head td{
 	font-weight:bold;
 	font-size:12px;
@@ -152,8 +155,12 @@ h1,h2,h3,h4,h5{
 }
 .td_oper span{
 	display:inline-block;
-	margin:10px;
-	color:#0000ff;
+	margin:0 5px;
+	color:#fff;
+	border: 1px solid transparent;
+	background: #108ee9;
+	border-radius: 3px;
+	padding: 5px 10px;
 	cursor:pointer;
 }
 .bd_info_con{
@@ -345,6 +352,8 @@ h1,h2,h3,h4,h5{
 }
 span.cancel{
 	color:#999999;
+	background: transparent;
+	border: 1px solid #999;
 }
 .text_area_small{
 	height:100px;
@@ -360,7 +369,7 @@ span.cancel{
 	background:#f2862c;
 	color:#fff;
 	padding:5px 20px;
-	border-radius:2px;
+	border-radius:5px;
 }
 .has_btn_style .cancel{
 	background:#999;
@@ -404,7 +413,7 @@ span.cancel{
 	color:#fff;
 	font-size:14px;
 	background:#f2862c;
-	border-radius:2px;
+	border-radius:5px;
 	border:none;
 }
 .box_tree{
@@ -505,6 +514,6 @@ span.cancel{
 
 .date_selector td.selectable_day{cursor: pointer;}
 
-.date_selector td.selected{background:#2b579a;color: #fff;font-weight: bold;}
+.date_selector td.selected{background:#f2862c;color: #fff;font-weight: bold;}
 
-.date_selector td.selectable_day:hover, .date_selector td.selectable_day.hover{background:#5985c7;color: #fff;}
+.date_selector td.selectable_day:hover, .date_selector td.selectable_day.hover{background:rgba(242, 134, 44, 0.59);color: #fff;}
