@@ -1,8 +1,22 @@
 var bgPpo = '<div class="bg_pop"></div>';
 $(function(){
+	$('.fixed_img').css({
+		'top':( $(window).outerHeight()-$('.fixed_img').height() )/2,
+		'left':( $(window).outerWidth()-$('.fixed_img').width() )/2-678
+	})
+	//查看影像
+	$('.see_yingxiang').click(function(){
+		$('.info_nav li').eq(2).click()
+	})
+	
 	$(".info_nav li").on("click",function(){
 		$(this).addClass("current").siblings().removeClass("current");
 		$(".bd_info_con").eq($(this).index()).show().siblings().hide();
+		if($(this).index()!==0){
+			$('.fixed_img').hide(0)
+		}else{
+			$('.fixed_img').show(0)
+		}
 	});
 	
 	$("#xiaFa").on("click",function(){
@@ -67,7 +81,7 @@ $(function(){
 	var tipCon2 = '<div class="show_tip_con show_tip_con_1">被保人（张三）年龄大于71岁，财务核保要求，请人工审核。</div>';
 	$("#dataTipsShow").hover(function(){
 		$(this).parent().append(tipCon2);
-		$(".panel").css("overflow","hidden").append(bgPpo);
+//		$(".panel").css("overflow","hidden").append(bgPpo);
 	},function(){
 		$(this).parent().css("background","none");
 		$(".show_tip_con_1").remove();

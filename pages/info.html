@@ -307,6 +307,37 @@
         .rlt {
             position: relative;
         }
+        
+        .hongkong{
+        	width: 50px;
+        	height: 50px;
+        	border-radius: 50%;
+        	border: 1px solid #ccc;
+        	cursor: pointer;
+        	float: left;
+        }
+        .fw_quanxian{
+        	float: left;
+        	margin-top: 10px;
+        	height: 28px;
+        	border: 1px solid #ccc;
+        	outline: none;
+        	padding: 0 0 0 10px;
+        	margin-right: 10px;
+        }
+        .hongkong img{
+        	width: 100%;
+        }
+        .fw_outer{
+        	width: 20px;
+        	height: 20px;
+        	border: none;
+        	opacity: 0.5;
+        	float: right;
+        	margin-left: 15px;
+        	margin-right: 10px;
+        	margin-top: 15px;
+        }
 </style>
 </head>
 <body>
@@ -320,11 +351,24 @@
 	            <a class="nowType">保单详细信息</a>
 	    	</div>
 	    	<div class="box_tel_info">
-	    		<div><span>24小时热线服务</span></div>
+	    		<!--<div><span>24小时热线服务</span></div>
 	            <div>
 	                <span class="ic-phone"></span>
 	                <span>3123 3123</span>
+	            </div>-->
+	            <select name="" class="fw_quanxian">
+	            	<option value="角色权限1">角色权限1</option>
+	            	<option value="角色权限2">角色权限2</option>
+	            	<option value="角色权限3">角色权限3</option>
+	            	<option value="角色权限4">角色权限4</option>
+	            </select>
+	            <div class="hongkong">
+	            	<img src="../images/hongkong.jpg"/>
 	            </div>
+	            <div class="hongkong fw_outer">
+	            	<img src="../images/out.png"/>
+	            </div>
+	            
 	    	</div>
 	    </div>
 	</div>
@@ -341,7 +385,7 @@
 			</ul>
 			<div class="info_top_r">
 				<div class="box_table">
-					<div class="table_title">照会信息</div>
+					<!--<div class="table_title">照会信息</div>-->
 					<button class="button btn_submit" id="xiaFa">下发照会</button>
 					<button class="button btn_submit" id="piLiang">批量处理</button>
 					
@@ -359,7 +403,7 @@
 							<td>Waring</td>
 							<td>已下发</td>
 							<td class="td_oper">
-								<span>查看</span>
+								<span class="see_yingxiang">查看</span>
 								<span>处理</span>
 							</td>
 						</tr>
@@ -369,7 +413,7 @@
 							<td>Waring</td>
 							<td>已下发</td>
 							<td class="td_oper">
-								<span>查看</span>
+								<span class="see_yingxiang">查看</span>
 								<span>处理</span>
 							</td>
 						</tr>
@@ -382,18 +426,18 @@
 	<div class="fw_main_content">
 		
 		<div class="info_nav_contents">
-			<!--bd_info_con 保单基本信息 s-->
+			<!--bd_info_con 保单信息 s-->
 			<div class="bd_info_con">
 				<!--form_group s-->
 				<div class="form_group">
-					<div class="table_title">保单基本信息<span class="arrows arrows_down"></span></div>
+					<div class="table_title">保单信息<span class="arrows arrows_down"></span></div>
 					<div class="slide_table">
 						<table class="fw_table_form">
 							<tr>
 								<td width="160">投保单号/保单号：</td>
 								<td><input class="input" type="text" value="A28718181"></td>
-								<td width="170">生效日期：</td>
-								<td id="showDateTips"><input class="input input_date" type="text" value="2017-08-11" readonly="readonly" id="date_demo3"></td>
+								<td width="170">出生日期：</td>
+								<td id="showDateTips"><input class="input input_date" type="text" value="1917-08-11" readonly="readonly" id="date_demo3"></td>
 								<td width="160">收单日：</td>
 								<td><input class="input input_date" type="text" value="2017-08-11" readonly="readonly"></td>
 							</tr>
@@ -674,10 +718,20 @@
 										<ul  id="treeDemo" class="ztree"></ul>
 									</div>
 								</td>
-								<td></td>
-								<td width="80"><img class="btn_calc" src="../styles/images/btn_calc.png"></td>
+								<td style="text-align: center;">
+									<img class="btn_calc" src="../styles/images/btn_calc.png">
+								</td>
+								<td width="120" style="text-align: right;">
+									<span class="icon_add" id="addShou"></span>
+									<span class="icon_delete" id=""></span>
+									
+								</td>
 							</tr>
 						</table>
+						<!--<div class="list_oper">
+							<span class="icon_add" id="addShou"></span>
+							<span class="icon_delete" id="deleteShou"></span>
+						</div>-->
 						<table class="fw_table">
 							<tr class="t_head">
 								<td>险种名称</td>
@@ -687,7 +741,6 @@
 								<td>生效日</td>
 								<td>保费</td>
 								<td>职业加费</td>
-								<td>操作</td>
 							</tr>
 							<tr>
 								<td>健康险</td>
@@ -697,10 +750,10 @@
 								<td><input class="input input_date" type="text" value="1988/07/08" readonly="readonly"></td>
 								<td>30,000</td>
 								<td>30,000</td>
-								<td class="td_oper">
+								<!--<td class="td_oper">
 									<span>添加</span>
 									<span>删除</span>
-								</td>
+								</td>-->
 							</tr>
 						</table>
 					</div>
@@ -771,7 +824,7 @@
 								</tr>
 							</table>
 							<div class="gaozhi">告知事项</div>
-							<textarea class="text_area"></textarea>
+							<textarea class="text_area" placeholder="请输入您需要告知的信息......"></textarea>
 						</div>
 					</div>
 				</div>
@@ -940,27 +993,6 @@
 			                <div>
 			                    <a href="../img/p3.jpg" data-size="1036x640">
 			                        <img  src="../img/p3.jpg">
-			                    </a>
-			                </div>
-			            </figure>
-			            <figure>
-			                <div>
-			                    <a href="../img/p4.jpg" data-size="1036x640">
-			                        <img  src="../img/p4.jpg">
-			                    </a>
-			                </div>
-			            </figure>
-			            <figure class="fg">
-			                <div>
-			                    <a href="../img/p5.jpg" data-size="1036x640">
-			                        <img  src="../img/p5.jpg">
-			                    </a>
-			                </div>
-			            </figure>
-			            <figure>
-			                <div>
-			                    <a href="../img/p6.jpg" data-size="1036x640">
-			                        <img  src="../img/p6.jpg">
 			                    </a>
 			                </div>
 			            </figure>
@@ -1239,7 +1271,7 @@
 								<td>客户所交保险费按投资账户分配比例分配后的投资金额不符公司规定，请调整。</td>
 							</tr>
 						</table>
-						<div class="pop_sub_title">照会列表</div>
+						<div class="pop_sub_title">照会信息</div>
 						<textarea class="text_area"></textarea>
 						<div class="td_oper" id="hidePopSpan">
 							<span>确定</span>
@@ -1249,6 +1281,9 @@
 				</div>
 				
 		</div>
+	</div>
+	<div class="fixed_img">
+		<img src="../styles/images/fixed_img.png"/>
 	</div>
 </div>
 <script type="text/javascript" src="../scripts/jquery-1.8.3.min.js"></script>
