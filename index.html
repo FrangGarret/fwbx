@@ -334,6 +334,36 @@
             height: 20px;
             float: left;
         }
+        .hongkong{
+        	width: 50px;
+        	height: 50px;
+        	border-radius: 50%;
+        	border: 1px solid #ccc;
+        	cursor: pointer;
+        	float: left;
+        }
+        .fw_quanxian{
+        	float: left;
+        	margin-top: 10px;
+        	height: 28px;
+        	border: 1px solid #ccc;
+        	outline: none;
+        	padding: 0 0 0 10px;
+        	margin-right: 10px;
+        }
+        .hongkong img{
+        	width: 100%;
+        }
+        .fw_outer{
+        	width: 20px;
+        	height: 20px;
+        	border: none;
+        	opacity: 0.5;
+        	float: right;
+        	margin-left: 15px;
+        	margin-right: 10px;
+        	margin-top: 15px;
+        }
     </style>
 </head>
 <body>
@@ -346,11 +376,23 @@
                 <a href="pages/info.html">保单详细信息</a>
         	</div>
         	<div class="box_tel_info">
-        		<div><span>24小时热线服务</span></div>
+        		<!--<div><span>24小时热线服务</span></div>
                 <div>
                     <span class="ic-phone"></span>
                     <span>3123 3123</span>
-                </div>
+                </div>-->
+                <select name="" class="fw_quanxian">
+	            	<option value="角色权限1">角色权限1</option>
+	            	<option value="角色权限2">角色权限2</option>
+	            	<option value="角色权限3">角色权限3</option>
+	            	<option value="角色权限4">角色权限4</option>
+	            </select>
+	            <div class="hongkong">
+	            	<img src="images/hongkong.jpg"/>
+	            </div>
+	            <div class="hongkong fw_outer">
+	            	<img src="images/out.png"/>
+	            </div>
         	</div>
         </div>
     </div>

@@ -22,6 +22,7 @@ a:link,a:visited{
 }
 img{
     border: none;
+    cursor: pointer;
 }
 em{
     font-style: normal;
@@ -481,6 +482,12 @@ span.cancel{
 	cursor: pointer;
 	border: 1px solid #ccc;
 }
+
+.slide_table{
+	background: #f7f7f7;
+	padding: 10px;
+}
+
 
 
 /*date*/

@@ -9,6 +9,11 @@ $(function(){
 		$('.info_nav li').eq(2).click()
 	})
 	
+	//点击受益人、被保人、投保人，信息折叠
+	$('.fw_img_click').click(function(){
+		$(this).parent().next('table').stop().slideToggle(300)
+	})
+	
 	$(".info_nav li").on("click",function(){
 		$(this).addClass("current").siblings().removeClass("current");
 		$(".bd_info_con").eq($(this).index()).show().siblings().hide();
